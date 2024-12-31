@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Moon, Sun, Send, RefreshCw } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { motion, AnimatePresence } from "framer-motion";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 const MBTI_TYPES = [
   "INTJ", "INTP", "ENTJ", "ENTP", 
@@ -119,6 +120,12 @@ export default function Chat() {
             >
               <RefreshCw size={18} />
             </Button>
+            <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
           </div>
         </nav>
       </header>
