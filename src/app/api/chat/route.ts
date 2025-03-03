@@ -1,3 +1,4 @@
+
 import { CoreMessage, streamText } from "ai";
 import { openai } from "@ai-sdk/openai";
 
